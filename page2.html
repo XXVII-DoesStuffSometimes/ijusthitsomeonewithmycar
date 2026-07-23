@@ -21,6 +21,7 @@
       function myFunction(xml) {
         var x, i, xmlDoc, txt;
         xmlDoc = xml.responseXML;
+        console.log(xmlDoc)
         txt = "";
         txt = xmlDoc.getElementsByTagName("root")[0].childNodes[0].nodeValue;
         document.getElementById("demo").innerHTML = txt;
