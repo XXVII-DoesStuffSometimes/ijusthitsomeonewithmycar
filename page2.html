@@ -7,24 +7,21 @@
     <button type="button" onclick="loadXMLDoc()">load stuff</button>
     <p id="demo"></p>
     <script>
-      function loadXMLDoc() {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            myFunction(this);
-          }
-        };
-        xmlhttp.open("GET", "help.xml", true); // i dont think github will let me do this but wtv
-        xmlhttp.send(); // how the fuck does this work
-      }
-
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          myFunction(this);
+        }
+      };
+      xhttp.open("GET", "help.xml", true);
+      xhttp.send();
+      
       function myFunction(xml) {
-        var x, i, xmlDoc, txt;
-        xmlDoc = fetch("help.xml");
-        console.log(xmlDoc)
-        txt = "";
-        txt = xmlDoc.getElementsByTagName("root")[0].childNodes[0].nodeValue;
-        document.getElementById("demo").innerHTML = txt;
+        var xmlDoc = xml.responseXML;
+        var x = xmlDoc.getElementsByTagName("post")[0];
+        var y = x.childNodes[0];
+        document.getElementById("demo").innerHTML =
+          y.nodeValue;
       }
     </script>
 
