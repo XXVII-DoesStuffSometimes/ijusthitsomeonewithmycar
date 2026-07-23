@@ -29,9 +29,9 @@
         console.log(parsed);
         var x = parsed.getElementsByTagName("username");
         console.log(x);
-        console.log(x.nodeValue);
+        console.log(x.textContent);
         document.getElementById("demo").innerHTML =
-          x.nodeValue;
+          x.textContent;
       }
     </script>
 
