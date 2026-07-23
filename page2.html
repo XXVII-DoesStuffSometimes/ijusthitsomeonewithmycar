@@ -27,7 +27,7 @@
 			  "</post></root>"; // WHY THE FUCK DOES THIS WORK?!
 		parsed = parser.parseFromString(text, "application/xml");
         console.log(parsed);
-        var x = parsed.getElementsByTagName("username"[0]);
+        var x = parsed.getElementsByTagName("username")[0];
         console.log(x);
         console.log(x.textContent);
         document.getElementById("demo").innerHTML =
