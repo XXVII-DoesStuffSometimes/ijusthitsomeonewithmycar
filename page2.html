@@ -16,9 +16,10 @@
       
       function myFunction(xml) {
         var xmlDoc = xml.responseXML;
+        console.log(xmlDoc)
         const parser = new DOMParser();
         xmlDoc = parser.parseFromString(xmlDoc, "text/xml"); // IM SO FUCKING CONFUSED WHAT IS GOING ON AUHGHGHHH
-        var x = xmlDoc.getElementsByTagName("post")[0];
+        var x = xmlDoc.getElementsByTagName("username")[0];
         console.log(x) // all var and no const makes me want to commit grand theft auto // GUHG UGH UHG UHU hUH UGh uHU fuG HU u
         // var y = x.childNodes[0];
         document.getElementById("demo").innerHTML =
