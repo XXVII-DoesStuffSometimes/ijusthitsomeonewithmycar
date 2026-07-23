@@ -17,7 +17,7 @@
       function myFunction(xml) {
         var xmlDoc = xml.responseXML;
         const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(xmlDoc, "text/xml"); // IM SO FUCKING CONFUSED WHAT IS GOING ON AUHGHGHHH
+        xmlDoc = parser.parseFromString(xmlDoc, "text/xml"); // IM SO FUCKING CONFUSED WHAT IS GOING ON AUHGHGHHH
         var x = xmlDoc.getElementsByTagName("post")[0];
         var y = x.childNodes[0];
         document.getElementById("demo").innerHTML =
