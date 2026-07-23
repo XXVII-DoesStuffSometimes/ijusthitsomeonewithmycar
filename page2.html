@@ -24,15 +24,14 @@
 			  "<vidname>i just hit someone with my car</vidname>" +
 			  "<views>0</views>" +
 			  "<date>-1873</date>" +
-			  "</post></root>";
+			  "</post></root>"; // WHY THE FUCK DOES THIS WORK?!
 		parsed = parser.parseFromString(text, "application/xml");
-        // my xml isnt malformed right???
         console.log(parsed);
         var x = parsed.getElementsByTagName("username");
-        console.log(x); // what is a HTMLCollection
+        console.log(x);
         console.log(x.childNodes[0].textContent);
         document.getElementById("demo").innerHTML =
-          x.childNodes[0].nodeValue;
+          x.nodeValue;
       }
     </script>
 
