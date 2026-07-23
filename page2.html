@@ -21,7 +21,7 @@
         xmlDoc = parser.parseFromString(xmlDoc, "application/xml"); // this returns an empty thing im so confused whyy
         // my xml isnt malformed right???
         console.log(xmlDoc)
-        var x = xmlDoc.getElementsByTagName("username"[0]);
+        var x = xmlDoc.getElementsByTagName("username");
         console.log(x) // what is a HTMLCollection
         console.log(x.childNodes[0].textContent)
         document.getElementById("demo").innerHTML =
