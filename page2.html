@@ -19,7 +19,13 @@
         console.log(xmlDoc);
         const parser = new DOMParser();
 		console.log(parser); // i doubt this does anything
-        parsed = parser.parseFromString(xmlDoc, "application/xml"); // this returns an empty thing im so confused whyy
+        // parsed = parser.parseFromString(xmlDoc, "application/xml"); // this returns an empty thing im so confused whyy
+		var text = "<root><post><username>xxvii</username>" +
+			  "<vidname>i just hit someone with my car</vidname>" +
+			  "<views>0</views>" +
+			  "<date>-1873</date>" +
+			  "</post></root>";
+		parsed = parser.parseFromString(text, "application/xml");
         // my xml isnt malformed right???
         console.log(parsed);
         var x = parsed.getElementsByTagName("username");
