@@ -29,7 +29,7 @@
         console.log(parsed);
         var x = parsed.getElementsByTagName("username");
         console.log(x);
-        console.log(x.childNodes[0].textContent);
+        console.log(x.nodeValue);
         document.getElementById("demo").innerHTML =
           x.nodeValue;
       }
