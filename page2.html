@@ -18,15 +18,14 @@
         var xmlDoc = xml.responseXML;
         console.log(xmlDoc)
         const parser = new DOMParser();
-        xmlDoc = parser.parseFromString(xmlDoc, "text/xml"); // IM SO FUCKING CONFUSED WHAT IS GOING ON AUHGHGHHH
-        console.log(xmlDoc) // huhhhhhhh bugfixing sad whyyyy im going to cry cry cyr cycr cry cry cryrc yr
-        var x = xmlDoc.getElementsByTagName("username"[0]); // im going to cry why is this so fucking difficult
+        xmlDoc = parser.parseFromString(xmlDoc, "application/xml"); // this returns an empty thing im so confused whyy
+        // my xml isnt malformed right???
+        console.log(xmlDoc)
+        var x = xmlDoc.getElementsByTagName("username"[0]);
         console.log(x) // what is a HTMLCollection
-        // console.log(x.childNodes[0].nodeValue) <-- this doesnt exist??? wtf???????
         console.log(x.childNodes[0].textContent)
-        // var y = x.childNodes[0];
         document.getElementById("demo").innerHTML =
-          x.childNodes[0].nodeValue; // IM GOING CRAZY IM GOING CRAZY IM GOING CRAZY FUCKING WAHT WHY AUGHHhghygiuaAEHfuIHAfhni
+          x.childNodes[0].nodeValue;
       }
     </script>
 
