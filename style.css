@@ -1,5 +1,17 @@
 /* yall are fucked this is literally my job (not really:( you should totally hire me tho ) */
 
 body {
-  background-color: #bbbbbb
+  background-color: #222;
+  font-family: arial;
+}
+
+div {
+  corner-radius: 6px;
+}
+
+.mainarea {
+  corner-radius: 0px;
+  background-color: #fff;
+  width: 960px;
+  margin: auto;
 }
