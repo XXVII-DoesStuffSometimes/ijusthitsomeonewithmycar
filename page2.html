@@ -15,14 +15,14 @@
           }
         };
         xmlhttp.open("GET", "help.xml", true); // i dont think github will let me do this but wtv
-        xmlhttp.send();
+        xmlhttp.send(); // how the fuck does this work
       }
 
       function myFunction(xml) {
         var x, i, xmlDoc, txt;
         xmlDoc = xml.responseXML;
         txt = "";
-        txt = xmlDoc.getElementsByTagName("vidname")[0].childNodes[0].nodeValue;
+        txt = xmlDoc.getElementsByTagName("root")[0].childNodes[0].nodeValue;
         document.getElementById("demo").innerHTML = txt;
       }
     </script>
