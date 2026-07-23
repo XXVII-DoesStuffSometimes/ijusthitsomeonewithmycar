@@ -16,15 +16,15 @@
       
       function myFunction(xml) {
         const xmlDoc = xml.responseXML;
-        console.log(xmlDoc)
+        console.log(xmlDoc);
         const parser = new DOMParser();
-				console.log(parser) // i doubt this does anything
+		console.log(parser); // i doubt this does anything
         parsed = parser.parseFromString(xmlDoc, "application/xml"); // this returns an empty thing im so confused whyy
         // my xml isnt malformed right???
-        console.log(parsed)
+        console.log(parsed);
         var x = parsed.getElementsByTagName("username");
-        console.log(x) // what is a HTMLCollection
-        console.log(x.childNodes[0].textContent)
+        console.log(x); // what is a HTMLCollection
+        console.log(x.childNodes[0].textContent);
         document.getElementById("demo").innerHTML =
           x.childNodes[0].nodeValue;
       }
