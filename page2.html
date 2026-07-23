@@ -20,11 +20,13 @@
         const parser = new DOMParser();
 		console.log(parser); // i doubt this does anything
         parsed = parser.parseFromString(xmlDoc, "application/xml"); // this returns an empty thing im so confused whyy
-		/* var text = "<root><post><username>xxvii</username>" +
+		var text = "<root><post><username>xxvii</username>" +
 			  "<vidname>i just hit someone with my car</vidname>" +
 			  "<views>0</views>" +
 			  "<date>-1873</date>" +
-			  "</post></root>"; // WHY THE FUCK DOES THIS WORK?! */
+			  "</post></root>"; // WHY THE FUCK DOES THIS WORK?!
+		console.log(xmlDoc)
+		console.log(text) // WHATS THE DIFFERENCE????????
 		// parsed = parser.parseFromString(text, "application/xml");
         console.log(parsed);
         var x = parsed.getElementsByTagName("username")[0];
