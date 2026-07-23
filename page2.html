@@ -19,11 +19,12 @@
         console.log(xmlDoc)
         const parser = new DOMParser();
         xmlDoc = parser.parseFromString(xmlDoc, "text/xml"); // IM SO FUCKING CONFUSED WHAT IS GOING ON AUHGHGHHH
-        var x = xmlDoc.getElementsByTagName("username")[0];
+        var x = xmlDoc.getElementsByTagName("username"[0]); // im going to cry why is this so fucking difficult
         console.log(x) // all var and no const makes me want to commit grand theft auto // GUHG UGH UHG UHU hUH UGh uHU fuG HU u
+        console.log(x.childNodes[0])
         // var y = x.childNodes[0];
         document.getElementById("demo").innerHTML =
-          x.nodeValue; // IM GOING CRAZY IM GOING CRAZY IM GOING CRAZY FUCKING WAHT WHY AUGHHhghygiuaAEHfuIHAfhni
+          x.childNodes[0].nodeValue; // IM GOING CRAZY IM GOING CRAZY IM GOING CRAZY FUCKING WAHT WHY AUGHHhghygiuaAEHfuIHAfhni
       }
     </script>
 
