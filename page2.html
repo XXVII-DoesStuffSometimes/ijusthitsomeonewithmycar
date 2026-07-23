@@ -22,10 +22,7 @@
         var x, i, xmlDoc, txt;
         xmlDoc = xml.responseXML;
         txt = "";
-        x = xmlDoc.getElementsByTagName("views");
-        for (i = 0; i< x.length; i++) {
-          txt += x[i].childNodes[0].nodeValue + "<br>";
-        }
+        txt = xmlDoc.getElementsByTagName("vidname")[0].childNodes[0].nodeValue;
         document.getElementById("demo").innerHTML = txt;
       }
     </script>
