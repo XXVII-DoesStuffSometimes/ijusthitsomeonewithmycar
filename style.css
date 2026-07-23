@@ -1,7 +1,7 @@
 /* yall are fucked this is literally my job (not really:( you should totally hire me tho ) */
 
 body {
-  background-color: #222;
+  background-color: #eee;
   font-family: arial;
 }
 
@@ -14,4 +14,9 @@ div {
   background-color: #fff;
   width: 960px;
   margin: auto;
+  min-height: 100vh;
+}
+
+.title {
+  background-color: #ccd
 }
