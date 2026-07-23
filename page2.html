@@ -15,13 +15,14 @@
       xhttp.send();
       
       function myFunction(xml) {
-        var xmlDoc = xml.responseXML;
+        const xmlDoc = xml.responseXML;
         console.log(xmlDoc)
         const parser = new DOMParser();
-        xmlDoc = parser.parseFromString(xmlDoc, "application/xml"); // this returns an empty thing im so confused whyy
+				console.log(parser) // i doubt this does anything
+        parsed = parser.parseFromString(xmlDoc, "application/xml"); // this returns an empty thing im so confused whyy
         // my xml isnt malformed right???
-        console.log(xmlDoc)
-        var x = xmlDoc.getElementsByTagName("username");
+        console.log(parsed)
+        var x = parsed.getElementsByTagName("username");
         console.log(x) // what is a HTMLCollection
         console.log(x.childNodes[0].textContent)
         document.getElementById("demo").innerHTML =
